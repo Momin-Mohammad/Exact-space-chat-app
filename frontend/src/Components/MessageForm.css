@@ -11,5 +11,6 @@
   
   .Message-typing-div > button{
     font-weight: 600;
+    width: 5%;
     padding: 1% 0%;
   }

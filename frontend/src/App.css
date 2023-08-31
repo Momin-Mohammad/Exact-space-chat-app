@@ -1,14 +1,39 @@
 .App {
   text-align: center;
+  padding: 3%;
+  border : 2px solid black;
+  border-radius: 10px;
+  margin: 3% 3% 0% 3%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --scroll-bar-color: #c5c5c5;
+  --scroll-bar-bg-color: #f6f6f6;
 }
 
-.emoji:after{
-  content : '\1F600';
+.ChatMessage-Main-div{
+  overflow-y: auto;
+  background-color: rgb(221, 255, 255);
+  text-align: start;
+  border-radius: 10px;
+  height: 400px;
+  scrollbar-width: 12px;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+  scrollbar-color: var(--scroll-bar-color) var(--scroll-bar-bg-color);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scroll-bar-bg-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-bar-color);
+  border-radius: 20px;
+  border: 3px solid var(--scroll-bar-bg-color);
 }
 
 @media (prefers-reduced-motion: no-preference) {
