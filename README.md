@@ -2,7 +2,7 @@
 A simple frontend chat application.
 
 ## Deployed link:
-![link](https://exact-space-chat-app.netlify.app/)
+[website link] (https://exact-space-chat-app.netlify.app/)
 
 ## Tech Stack:
 1. React
