@@ -1,6 +1,9 @@
 # Exact-space-chat-app
 A simple frontend chat application.
 
+## Deployed link:
+![link](https://exact-space-chat-app.netlify.app/)
+
 ## Tech Stack:
 1. React
 2. Emoji Picker React
