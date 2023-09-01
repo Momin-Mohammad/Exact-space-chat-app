@@ -4,12 +4,23 @@
     align-items: center;
   }
   
-  .Message-typing-div > input{
+  .Message-Input{
+    height: 15px;
+    resize: none;
+    overflow: hidden;
     width: 95%;
     padding: 1% 1%;
+    border: 1px solid gray;
+    border-right: 0px;
+    border-radius: 20px 0px 0px 20px;
   }
   
-  .Message-typing-div > button{
+  .Message-Submit-btn{
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-left: 0px;
+    border-radius: 0px 20px 20px 0px;
     font-weight: 600;
     width: 5%;
     padding: 1% 0%;

@@ -1,0 +1,16 @@
+.Suggestion-Popup-div{
+    position: absolute;
+    bottom: 21%;
+    left: 40%;
+    background-color: rgb(213, 229, 224);
+    border-radius: 10px;
+    padding: 1% 2%;
+    margin: auto;
+    z-index: 1;
+}
+
+.Suggestion-Name-div{
+    cursor: pointer;
+    color: rgb(50, 50, 195);
+    border-bottom: 1.5px solid black;
+}

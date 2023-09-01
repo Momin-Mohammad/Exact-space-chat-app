@@ -2,11 +2,13 @@ import './App.css';
 import { useState } from 'react';
 import MessageForm from './Components/MessageForm';
 import ChatMessage from './Components/ChatMessage';
+import SuggestionPopup from './Components/SuggestionPopup';
 
 const user_list = ["Alan", "Bob", "Carol", "Dean", "Elin"]
 function App() {
   const[chat,setChat] = useState([]);
   const [msg,setMsg] = useState("");
+  const[suggestion,setSuggestion] = useState(false);
  
   const sendMsg=(e)=>{
     e.preventDefault();
@@ -33,7 +35,15 @@ function App() {
           )
         }
       </div>
+      {
+      suggestion?
+      <SuggestionPopup 
+      msg={msg}
+      setMsg={setMsg}
+      setSuggestion={setSuggestion}/> : null
+      }
       <MessageForm 
+      setSuggestion = {setSuggestion}
       msg = {msg}
       setMsg = {setMsg}
       sendMsg={sendMsg} />
