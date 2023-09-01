@@ -1,18 +1,12 @@
 import { useState } from "react"
-import './MessageForm.css'
-export default function MessageForm({msg,sendMsg,setMsg,setSuggestion}){
+import './MessageForm.css';
+import {GoSmiley} from "react-icons/go"
+export default function MessageForm({emojiBox,msg,sendMsg,checkTag}){
  
-  const checkTag =(value)=>{
-    setMsg(value);
-    if(value[value.length-1] === "@"){
-      setSuggestion(true);
-    }else{
-      setSuggestion(false);
-    }
-  }
     return(
         <form onSubmit={sendMsg} className="Message-typing-div">
         <textarea className="Message-Input" value={msg} onChange={(e)=>checkTag(e.target.value)} type="text" />
+        <div className="Message-emoji-div" onClick={emojiBox}><GoSmiley /></div>
         <button className="Message-Submit-btn" type="submit">Send</button>
       </form>
     )

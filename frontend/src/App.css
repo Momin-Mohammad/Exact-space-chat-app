@@ -21,6 +21,14 @@
   padding-bottom: 15%;
 }
 
+.ChatMessage-emoji-picker-comp-div{
+  width: fit-content;
+  position: absolute;
+  bottom: 13%;
+  left: 65%;
+  z-index: 1;
+}
+
 *::-webkit-scrollbar {
   width: 10px;
   border-radius: 5px;

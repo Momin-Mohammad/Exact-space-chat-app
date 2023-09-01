@@ -3,12 +3,32 @@ import { useState } from 'react';
 import MessageForm from './Components/MessageForm';
 import ChatMessage from './Components/ChatMessage';
 import SuggestionPopup from './Components/SuggestionPopup';
+import Picker from 'emoji-picker-react';
 
 const user_list = ["Alan", "Bob", "Carol", "Dean", "Elin"]
 function App() {
   const[chat,setChat] = useState([]);
   const [msg,setMsg] = useState("");
   const[suggestion,setSuggestion] = useState(false);
+  const [showEmoji, setShowEmoji] = useState(false);
+
+  const onEmojiClick = (event) => {
+    console.log(event.emoji)
+    setMsg(msg+event.emoji)
+};
+
+const checkTag =(value)=>{
+  setMsg(value);
+  if(value[value.length-1] === "@"){
+    setSuggestion(true);
+  }else{
+    setSuggestion(false);
+  }
+}
+
+const emojiBox=()=>{
+  setShowEmoji(!showEmoji);
+}
  
   const sendMsg=(e)=>{
     e.preventDefault();
@@ -43,10 +63,18 @@ function App() {
       setSuggestion={setSuggestion}/> : null
       }
       <MessageForm 
-      setSuggestion = {setSuggestion}
+      checkTag = {checkTag}
+      emojiBox = {emojiBox}
       msg = {msg}
       setMsg = {setMsg}
       sendMsg={sendMsg} />
+
+       {showEmoji? <div className="ChatMessage-emoji-picker-comp-div">
+            <Picker onEmojiClick={onEmojiClick} />
+        </div>:null
+        }
+
+
     </div> 
   );
 }
