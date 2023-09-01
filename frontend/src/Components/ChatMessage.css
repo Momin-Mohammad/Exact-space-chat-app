@@ -18,7 +18,10 @@
     background-color: brown;
 }
 
-.ChatMessage-Message-div{
+.ChatMessage-Message-maindiv{
+    display: flex;
+    align-items: center;
+    gap: 2%;
     white-space: pre-wrap;
     word-wrap: break-word;
     word-break: break-word;
@@ -27,7 +30,10 @@
     padding: 0.8%;
     font-size: medium;
     font-weight: 400;
-    width: fit-content;
     background-color: white;
     border-radius: 0px 10px 10px 10px;
+}
+
+.ChatMessage-Message-div{
+    width: 90%;
 }

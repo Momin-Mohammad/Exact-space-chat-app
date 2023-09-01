@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  padding: 3%;
+  padding: 1%;
   border : 2px solid black;
   border-radius: 10px;
   margin: 3% 3% 0% 3%;
@@ -12,12 +12,13 @@
 }
 
 .ChatMessage-Main-div{
-  overflow-y: auto;
+  overflow-y: scroll;
   background-color: rgb(245, 243, 243);
   text-align: start;
   border-radius: 20px;
-  height: 400px;
+  height: 300px;
   scrollbar-width: 12px;
+  padding-bottom: 15%;
 }
 
 *::-webkit-scrollbar {
